@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Application</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;500&family=Mina:wght@400;700&family=Noto+Nastaliq+Urdu&display=swap');
+  </style>
+  <!-- font awesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" href="imges-icons/648198.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  {{>header}}
+  <!-- Home section  -->
+  <section class="home" id="home">
+
+    <div class="left">
+      <h1>السَّلاَمُ عَلَيْكُمْ</h1>
+      <p>Welcome to code crafter`s weather Application, your go-to destination for accurate and up-to-date weather
+        information.
+        Explore the world of weather with our user-friendly interface and comprehensive features designed to keep you
+        informed and prepared for any forecast</p><a href="#"><button data-tilt id="weather_link2">Weather App</button></a>
+    </div>
+    <div class="right">
+      <img src="imges-icons/drizzle.gif" alt="drizzle">
+    </div>
+  </section>
+
+
+  {{>footer}}
+  {{>jsFile}}
+
+</body>
+
+</html>

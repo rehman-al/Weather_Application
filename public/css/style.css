@@ -1,0 +1,342 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'mina';
+}
+
+header {
+    position: sticky;
+    color: #c9ada7;
+    background-color: white;
+    padding: 15px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid #22223b;
+    transition: all ease .6s;
+}
+
+.sticky {
+    background-color: #22223b;
+    top: 0;
+    height: 60px;
+    z-index: 9999;
+}
+
+.sticky .logo {
+    display: none;
+    transition: all ease .6s;
+    visibility: hidden;
+}
+
+.logo {
+    display: block;
+    width: 100px;
+    transition: all ease .6s;
+    z-index: 9;
+
+}
+
+.logo img {
+    width: 100px;
+}
+
+.sticky nav {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: all ease .5s;
+}
+
+ion-icon {
+    display: none;
+    color: #434343;
+}
+
+.sticky ion-icon {
+    color: #c9ada7;
+}
+
+nav div{
+    position: relative;
+    text-decoration: none;
+    color: #434343;
+    width: 100px;
+}
+
+.sticky div {
+    color: #c9ada7;
+}
+
+nav div:hover {
+    color: #9D3BE1;
+}
+
+nav div::after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    top: -10px;
+    left: 0;
+    background-color: #9D3BE1;
+    height: 5px;
+    border-radius: 12%;
+    width: 20px;
+    transition: all ease .5s;
+}
+
+nav div:hover::after {
+    opacity: 1;
+    width: 100%;
+    transition: all ease .5s;
+
+}
+
+
+/* home section */
+.home {
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0 0 100px;
+
+}
+
+.home h1 {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    font-size: 25px;
+    color: #9D3BE1;
+}
+
+.home p {
+    width: 400px;
+}
+
+.hoem .left {
+    height: 100%;
+}
+
+.home .left a {
+    display: inline-block;
+    margin: 70px 0;
+}
+
+.home .left a button {
+    background-color: #22223b;
+    height: 50px;
+    width: 120px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all ease .5s;
+}
+
+/* .home .left a button:hover {
+    scale: .9;
+} */
+
+.home .right {
+    width: 400px;
+}
+
+.home .right img {
+    max-width: 100%;
+}
+
+/* footer  */
+footer {
+    display: flex;
+    padding: 40px 150px;
+    justify-content: space-between;
+    width: 100%;
+    color: #fff;
+    height: 300px;
+    background-color: #22223b;
+}
+
+footer div h1 {
+    font-size: 19px;
+    border-bottom: 1px solid white;
+}
+
+footer .contact {
+
+    height: 100%;
+}
+
+footer .contact .contact-data {
+    margin-top: 50px;
+}
+
+footer .contact .contact-data div {
+    margin-top: 10px;
+}
+
+footer .contact .contact-data div i {
+    margin-right: 10px;
+    font-size: 19px;
+}
+
+footer .navigation .nav-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 80%;
+}
+
+footer .navigation .nav-data a {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+footer .navigation .nav-data a:hover {
+    color: crimson;
+}
+
+
+footer .message .msg-data {
+    margin-top: 20px;
+}
+
+footer .message .msg-data label {
+    display: block;
+}
+
+footer .input button {
+    width: 40px;
+    transition: all ease .5s;
+}
+
+footer .input button:hover {
+    scale: 1.1;
+}
+
+footer  .float {
+    display: none;
+}
+
+@media (max-width:900px) {
+
+    /* for header 900px */
+    .sticky .logo {
+        display: block;
+        transition: all ease .6s;
+        visibility: hidden;
+    }
+
+    .sticky .logo {
+        opacity: 1;
+        transition: all ease .6s;
+        visibility: visible;
+    }
+
+    .sticky nav {
+
+        background-color: #22223b;
+    }
+
+    nav {
+        text-align: center;
+        background-color: white;
+        flex-direction: column;
+        display: flex;
+        position: absolute;
+        top: -500%;
+        opacity: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    nav.jq-toggle {
+        opacity: 1;
+        top: 60px;
+    }
+
+    nav a {
+        padding: 16px 0;
+    }
+
+    ion-icon {
+        display: block;
+        font-size: 25px;
+        margin-right: 40px;
+    }
+
+    /* for home 990  */
+
+    .home {
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 50px 12px;
+
+    }
+
+    .home h1 {
+        text-align: center;
+    }
+
+    .home p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .home .right {
+        text-align: center;
+        width: 100%;
+    }
+
+    .home .right img {
+        max-width: 50%;
+    }
+
+    /* footer 900px */
+    footer .navigation {
+        display: none;
+    }
+
+    footer {
+        position: relative;
+        overflow: hidden;
+    }
+
+    footer .message {
+        position: absolute;
+        padding: 40px 50px;
+        background-color: #22223b;
+        border: 2px solid #fff;
+        height: 300px;
+        width: 250px;
+        border-radius: 12px;
+        bottom: -100%;
+        right: -100%;
+
+    }
+
+    footer .float {
+        position: absolute;
+        display: flex;
+        cursor: pointer;
+        bottom: 0;
+        right: 10px;
+        justify-content: center;
+        align-items: center;
+        background-color: #22223b;
+        color: white;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #fff;
+        font-size: 25px;
+        border-radius: 50%;
+
+    }
+}

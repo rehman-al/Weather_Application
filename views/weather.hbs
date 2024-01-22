@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;500&family=Mina:wght@400;700&family=Noto+Nastaliq+Urdu&display=swap');
+    </style>
+    <link rel="icon" href="imges-icons/648198.png">
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/weather.css">
+</head>
+
+<body>
+    {{>header}}
+
+    <div id="mouse"></div>
+    <!-- weather section  -->
+    <section id="weather">
+        <div class="upper">
+            <div class="wth-head">
+                <h1 id="WWW">Provide You a World Wide Weather Forecast</h1>
+            </div>
+            <form class="wth-search">
+                <input type="text" placeholder="Enter City name..." autocomplete="off" id="input" spellcheck="false">
+                <button type="submit" value="search" id="submit_btn">Search</button>
+            </form>
+        </div>
+
+
+        <!-- real time data  -->
+        <div class="real-data">
+            <div class="dt-left">
+                <div class="time">
+                    <div id="time-hours">12</div>
+                    <div id="time-seconds">:</div>
+                    <div id="time-minutes">23</div>
+                    <div id="time-am-pm"> am</div>
+                </div>
+                <div class="location">
+                    <div class="lc-name"><i class="fa-solid fa-location-dot"></i>
+                        <span id="cityname">CITY-NAME</span>
+                    </div>
+                </div>
+                <div class="formal">
+                    Search your city name to check the weather around you <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
+
+            <div class="dt-right" id="dt-right">
+                <div id="weather_icon">
+                    <div id="weather_situation"> <i class="fa-solid fa-sun" style="color: #EBC969;"></i></div>
+                    <div id="weather_text">____</div>
+                </div>
+
+
+                <div class="temp">
+                    <p>
+                        <span id="temp_number">00</span>&deg;C
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- footer  -->
+    {{>footer}}
+    {{>jsFile}}
+
+
+</body>
+
+</html>
